@@ -14,7 +14,7 @@ namespace Practice
             this._id = id;
             this._name = name;
             this._dateOfBirth = dob;
-            this._subjects = new int[] { -1, -1, -1, -1, -1 };
+            this._subjects = new int[5];
         }
 
         public int Id => this._id;
@@ -56,7 +56,7 @@ namespace Practice
         {
             for (int i = 0; i < _subjects.Length; i++)
             {
-                if (_subjects[i] != subjectID)
+                if (_subjects[i] != subjectID && _subjects[i] == 0)
                 {
                     _subjects[i] = subjectID;
                     break;
@@ -70,7 +70,7 @@ namespace Practice
             {
                 if (_subjects[i] == subjectID)
                 {
-                    _subjects[i] = -1;
+                    _subjects[i] = 0;
                     break;
                 }
             }

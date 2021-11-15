@@ -40,7 +40,7 @@
         {
             for (int i = 0; i < _students.Length; i++)
             {
-                if (_students[i] != studentID)
+                if (_students[i] != studentID && _students[i] == 0)
                 {
                 _students[i] = studentID;
                 break;
@@ -54,7 +54,7 @@
             {
                 if(_students[i] == studentID)
                 {
-                    _students[i] = -1;
+                    _students[i] = 0;
                     break;
                 }
             }
